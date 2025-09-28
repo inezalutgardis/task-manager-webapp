@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- How I designed the page title (child templates can override this block) -->
+    <title>{% block title %}Task Manager{% endblock %}</title>
+
+    <!-- How I linked to external stylesheet in the "static" folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <!-- How I designed the main container for all page content -->
+    <div class="container">
+        <!-- This is a placeholder for page-specific content (in child templates like index.html) -->
+        {% block content %}{% endblock %}
+    </div>
+</body>
+
+</html>

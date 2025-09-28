@@ -1,0 +1,123 @@
+/* 1. General Page Styling */
+
+/* Default font and page background */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+}
+
+/* Main content container (white box in the center) */
+.container {
+    width: 500px;
+    margin: auto;
+    /* Center horizontally */
+    background: #fff;
+    padding: 20px;
+    margin-top: 50px;
+    /* Space from top of page */
+    border-radius: 5px;
+    /* Rounded corners */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+/* Title styling */
+h1 {
+    text-align: center;
+}
+
+/* 2. Form & Input Styling */
+
+/* Place form inputs side by side */
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Text input box for tasks */
+input[type="text"] {
+    padding: 8px;
+    width: 70%;
+}
+
+/* "Add" button styling */
+button {
+    padding: 8px 12px;
+    margin-left: 10px;
+    background-color: #007BFF;
+    /* blue */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Hover effect for "Add" button */
+button:hover {
+    background-color: #0056b3;
+    /* darker blue */
+}
+
+/* 3. Task List Styling */
+
+/* Remove bullet points from task list */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Style for each task row */
+li {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    /* Task text on the left, while the buttons are on the right */
+}
+
+/* 4. Links (Default HTML <a>) */
+a {
+    margin-left: 10px;
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 5. Action Buttons (Complete/Delete) */
+.action-btn {
+    padding: 4px 8px;
+    margin-left: 5px;
+    background-color: #6c757d;
+    /* default gray */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* The Complete button, which I made green */
+.action-btn.complete {
+    background-color: #28a745;
+}
+
+/* The Delete button, which I made red */
+.action-btn.delete {
+    background-color: #dc3545;
+}
+
+/* The Hover effect for both buttons above */
+.action-btn:hover {
+    opacity: 0.9;
+}
+
+/* 6. Completed Task Styling */
+li.done {
+    text-decoration: line-through;
+    /* Crossed out text */
+    color: gray;
+    /* Made it lighter */
+}

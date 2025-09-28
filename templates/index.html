@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Task Manager{% endblock %}
+
+{% block content %}
+<h1>Task Manager</h1>
+
+<!-- Form to add a new task -->
+<form action="/add" method="POST">
+  <input type="text" name="task" placeholder="Enter a task" required>
+  <button type="submit" class="action-btn add">Add</button>
+</form>
+
+<hr>
+
+<!-- How I created a list of tasks -->
+<ul>
+  {% for task in tasks %}
+  <!-- How I display each task in the list -->
+  <li class="{% if task['done'] %}done{% endif %}">
+
+    <!-- How I show the text of the task -->
+    {{ task['content'] }}
+
+    <!-- If the task is not complete, show a "Complete" button -->
+    {% if not task['done'] %}
+    <a href="/complete/{{ task['id'] }}" class="action-btn complete">Complete</a>
+    {% endif %}
+
+    <!-- Show a "Delete" button for every task -->
+    <a href="/delete/{{ task['id'] }}" class="action-btn delete">Delete</a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

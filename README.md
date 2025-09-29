@@ -63,8 +63,13 @@ task-manager-webapp/
 6. **Open the app in your browser**
     Go to: http://127.0.0.1:5000
 
+    > NOTE: If port 5000 is already in use, Flask may run on another port (e.g., 5001). Check your terminal output to confirm.
+
 ## Sample Output
 ![Task Manager Screenshot](sample_output.png)
+
+## Live Demo
+Check out the running app here: [Task Manager on Render](https://task-manager-webapp-23og.onrender.com)
 
 ## Technologies Used
 
